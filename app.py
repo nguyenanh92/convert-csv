@@ -36,3 +36,5 @@ def download():
 
     return send_from_directory(directory, text_file, as_attachment=True)
 
+if __name__ == '__main__':
+    app.run(debug=True)

@@ -16,7 +16,7 @@ def convert():
     return render_template('download.html', text_data=text_data)
 
 def convert_csv_to_text(csv_file):
-    text_file = 'static/file.txt'
+    text_file = 'file.txt'
 
     # Đọc dữ liệu từ file CSV bằng pandas
     df = pd.read_csv(csv_file)
@@ -31,10 +31,8 @@ def convert_csv_to_text(csv_file):
 
 @app.route('/download')
 def download():
-    text_file = 'static/file.txt'
+    text_file = 'file.txt'
     directory = os.getcwd()  # Lấy đường dẫn thư mục gốc
 
     return send_from_directory(directory, text_file, as_attachment=True)
 
-if __name__ == '__main__':
-    app.run()

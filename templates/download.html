@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSV to Text Converter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #292929;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+        }
+
+        h1, h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        pre {
+            background-color: #1e1e1e;
+            padding: 1rem;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>File TXT Converted</h2>
+        <a class="btn btn-success" href="{{ url_for('download') }}">Download</a>
+        <h2>Converted Text Result   </h2>
+        <pre>{{ text_data }}</pre>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
